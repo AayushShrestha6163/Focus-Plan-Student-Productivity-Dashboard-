@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* Basic Setup */
+    "target": "ES6",
+    "module": "NodeNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Module Resolution */
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+
+    /* Node Environment */
+    "types": ["node"],
+
+    /* Output */
+    "sourceMap": true,
+
+    /* Performance */
+    "skipLibCheck": true,
+
+    /* Compatibility */
+    "forceConsistentCasingInFileNames": true
+  },
+
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
