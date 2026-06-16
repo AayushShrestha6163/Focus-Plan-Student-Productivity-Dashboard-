@@ -10,7 +10,10 @@ const router = express.Router();
 router.post("/", authMiddleware, async (req: AuthRequest, res) => {
   try {
     const task = await Task.create({
-      ...req.body,
+      title: req.body.title,
+      description: req.body.description,
+      priority: req.body.priority,
+      dueDate: req.body.dueDate,
       userId: req.user?.id,
     });
 
