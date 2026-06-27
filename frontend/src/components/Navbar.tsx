@@ -1,35 +1,83 @@
-import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
 
-export default function Navbar() {
-  return (
-    <nav className="sticky top-0 z-50 bg-white border-b">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <h1 className="font-bold text-xl text-blue-600">
-          Focus Plan
-        </h1>
 
-        <div className="hidden md:flex gap-8 text-sm">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#reviews">Reviews</a>
-        </div>
+export default function Navbar(){
 
-        <div className="flex gap-3">
-          <Link
-            to="/login"
-            className="px-4 py-2 text-sm"
-          >
-            Sign In
-          </Link>
 
-          <Link
-            to="/register"
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm"
-          >
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
+
+const user = JSON.parse(
+localStorage.getItem("user") || "{}"
+);
+
+
+
+return (
+
+<div className="navbar-dashboard">
+
+
+
+<div>
+
+<h2>
+Dashboard
+</h2>
+
+
+<p>
+Manage your productivity
+</p>
+
+
+</div>
+
+
+
+<div className="profile-box">
+
+
+<div className="avatar">
+
+{
+user.name
+?
+user.name.charAt(0).toUpperCase()
+:
+"U"
+}
+
+</div>
+
+
+
+<div>
+
+
+<h4>
+
+{
+user.name || "User"
+}
+
+</h4>
+
+
+<span>
+Student
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+)
+
 }

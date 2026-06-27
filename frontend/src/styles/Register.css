@@ -1,0 +1,179 @@
+@import "./Login.css";
+
+
+.success-page {
+
+min-height:100vh;
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#f4f7ff;
+
+}
+
+
+.success-card {
+
+
+width:420px;
+
+background:white;
+
+padding:45px;
+
+border-radius:30px;
+
+text-align:center;
+
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.15);
+
+
+animation:successPop .5s ease;
+
+
+}
+
+
+
+.success-icon {
+
+
+width:90px;
+
+height:90px;
+
+margin:0 auto 20px;
+
+
+border-radius:50%;
+
+
+background:#22c55e;
+
+
+color:white;
+
+
+font-size:55px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+animation:bounce .6s ease;
+
+
+}
+
+
+
+.success-card h1 {
+
+
+font-size:34px;
+
+color:#111827;
+
+margin-bottom:15px;
+
+}
+
+
+
+.success-card p {
+
+
+color:#64748b;
+
+font-size:17px;
+
+}
+
+
+
+.small-text {
+
+margin-top:-10px;
+
+}
+
+
+
+.redirect {
+
+
+margin-top:25px;
+
+
+color:#2563eb;
+
+
+font-weight:600;
+
+
+}
+
+
+
+@keyframes successPop {
+
+
+0% {
+
+opacity:0;
+
+transform:scale(.7) translateY(40px);
+
+}
+
+
+100% {
+
+opacity:1;
+
+transform:scale(1) translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes bounce {
+
+
+0%{
+
+transform:scale(0);
+
+}
+
+
+70%{
+
+transform:scale(1.2);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}

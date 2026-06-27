@@ -8,7 +8,8 @@ import dashboardRoutes from "./routes/dashboard";
 import goalRoutes from "./routes/goal";
 import sessionRoutes from "./routes/session";
 import notificationRoutes from "./routes/notification";
-
+import analyticsRoutes from "./routes/analytics";
+import eventRoutes from "./routes/event";
 dotenv.config();
 connectDB();
 const app = express();
@@ -21,7 +22,8 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/goals", goalRoutes);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/notifications",notificationRoutes);
-
+app.use("/api/analytics",analyticsRoutes);
+app.use("/api/events",eventRoutes);
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
