@@ -3,6 +3,9 @@ import Landing from "./pages/Landing";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/Dashboard";
+import Tasks from "./pages/Tasks";
+import AddTask from "./pages/AddTask";
+import EditTask from "./pages/EditTask";
 function App() {
   return (
     <Routes>
@@ -10,6 +13,9 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/tasks" element={<Tasks />} />
+      <Route path="/add-task" element={<AddTask />} />
+      <Route path="/edit-task/:id" element={<EditTask />} />
     </Routes>
   );
 }

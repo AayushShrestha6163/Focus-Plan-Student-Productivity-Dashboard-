@@ -18,14 +18,24 @@ const taskSchema = new mongoose.Schema(
       default: "Medium",
     },
 
-    dueDate: {
-      type: Date,
-    },
+   
 
-    completed: {
-      type: Boolean,
-      default: false,
-    },
+
+schedule:{
+ type:Date,
+},
+
+
+reminder:{
+ type:Boolean,
+ default:true
+},
+
+
+completed:{
+ type:Boolean,
+ default:false
+},
 
     userId: {
       type: mongoose.Schema.Types.ObjectId,
