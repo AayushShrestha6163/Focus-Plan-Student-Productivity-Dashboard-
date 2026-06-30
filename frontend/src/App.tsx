@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Tasks from "./pages/Tasks";
 import AddTask from "./pages/AddTask";
 import EditTask from "./pages/EditTask";
+import Goals from "./pages/Goals";
 function App() {
   return (
     <Routes>
@@ -16,6 +17,7 @@ function App() {
       <Route path="/tasks" element={<Tasks />} />
       <Route path="/add-task" element={<AddTask />} />
       <Route path="/edit-task/:id" element={<EditTask />} />
+      <Route path="/goals" element={<Goals />} />
     </Routes>
   );
 }
