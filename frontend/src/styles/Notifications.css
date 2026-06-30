@@ -1,0 +1,319 @@
+.notifications-page {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+  padding: 35px;
+  background: #f7f8ff;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.notifications-header h1 {
+  font-size: 34px;
+  margin: 0;
+  color: #111827;
+}
+
+.notifications-header p {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.mark-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mark-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #2563eb55;
+}
+
+/* TABS */
+
+.notif-filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.tab {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* LIST */
+
+.notif-list {
+  margin-top: 25px;
+}
+
+.notif-card {
+  position: relative;
+  background: white;
+  padding: 20px 22px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+}
+
+.notif-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.notif-card.unread {
+  background: #f8faff;
+  border-left: 3px solid #2563eb;
+}
+
+.notif-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notif-icon.task {
+  background: #eef2ff;
+  color: #2563eb;
+}
+
+.notif-icon.goal {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.notif-icon.study {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.notif-icon.system {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.notif-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-top-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.notif-card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #111827;
+}
+
+.notif-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.notif-card p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.notif-time {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.notif-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.notif-read-btn,
+.notif-delete-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notif-read-btn {
+  background: #eef2ff;
+  color: #2563eb;
+}
+
+.notif-delete-btn {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.notif-read-btn:hover,
+.notif-delete-btn:hover {
+  opacity: 0.8;
+}
+
+.unread-dot {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.notif-actions ~ .unread-dot {
+  display: none;
+}
+
+/* EMPTY STATE */
+
+.empty {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.empty svg {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+.empty h3 {
+  margin: 0 0 8px 0;
+  color: #111827;
+}
+
+.empty p {
+  margin: 0;
+}
+
+/* DELETE POPUP (reused pattern) */
+
+.delete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.delete-popup {
+  width: 380px;
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.delete-popup h2 {
+  margin-top: 0;
+}
+
+.delete-popup p {
+  color: #64748b;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.popup-actions button {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-delete {
+  background: #e5e7eb;
+}
+
+.confirm-delete {
+  background: #ef4444;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .notifications-page {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  .notif-card {
+    flex-direction: column;
+  }
+
+  .notif-actions {
+    align-self: flex-end;
+  }
+}
