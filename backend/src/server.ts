@@ -6,6 +6,8 @@ import authRoutes from './routes/auth';
 import taskRoutes from "./routes/Task";
 import dashboardRoutes from "./routes/dashboard";
 import goalRoutes from "./routes/goal";
+import sessionRoutes from "./routes/session";
+import notificationRoutes from "./routes/notification";
 
 dotenv.config();
 connectDB();
@@ -17,6 +19,8 @@ app.use('/api/auth', authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/goals", goalRoutes);
+app.use("/api/sessions", sessionRoutes);
+app.use("/api/notifications",notificationRoutes);
 
 const PORT = process.env.PORT || 5000;
 
