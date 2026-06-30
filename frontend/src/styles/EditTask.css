@@ -1,0 +1,74 @@
+.edit-page{
+
+margin-left:250px;
+padding:40px;
+background:#f7f8ff;
+min-height:100vh;
+
+}
+
+
+
+.edit-card{
+
+width:500px;
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px #ddd;
+
+}
+
+
+
+.edit-card input,
+.edit-card textarea,
+.edit-card select{
+
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+}
+
+
+
+
+.edit-card textarea{
+
+height:120px;
+
+}
+
+
+
+
+.edit-card button{
+
+
+width:100%;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:14px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}

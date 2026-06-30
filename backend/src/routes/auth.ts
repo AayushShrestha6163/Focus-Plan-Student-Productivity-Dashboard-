@@ -42,50 +42,99 @@ router.post("/register", async (req, res) => {
   }
 });
 
+
 /**
  * Login User
  */
 router.post("/login", async (req, res) => {
+
   const { email, password } = req.body;
 
+
   try {
+
+
     const user = await User.findOne({ email });
 
+
     if (!user) {
+
       return res.status(400).json({
-        message: "Invalid credentials",
+        message:"Invalid credentials"
       });
+
     }
+
+
 
     const isMatch = await bcrypt.compare(
       password,
       user.password
     );
 
+
+
     if (!isMatch) {
+
       return res.status(400).json({
-        message: "Invalid credentials",
+        message:"Invalid credentials"
       });
+
     }
 
-    console.log("JWT_SECRET:", process.env.JWT_SECRET);
+
 
     const token = jwt.sign(
-      { id: user._id },
+
+      { 
+        id:user._id 
+      },
+
       process.env.JWT_SECRET as string,
-      { expiresIn: "1h" }
+
+      {
+        expiresIn:"1h"
+      }
+
     );
 
+
+
+
     res.status(200).json({
+
       token,
+
+      user:{
+
+        id:user._id,
+
+        name:user.name,
+
+        email:user.email
+
+      }
+
     });
-  } catch (error) {
-    console.error("Login Error:", error);
+
+
+
+  } catch(error) {
+
+
+    console.error("Login Error:",error);
+
 
     res.status(500).json({
-      message: "Server error",
+
+      message:"Server error"
+
     });
+
+
   }
+
+
 });
 
 export default router;
