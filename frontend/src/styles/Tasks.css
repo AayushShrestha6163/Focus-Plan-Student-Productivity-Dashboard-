@@ -642,3 +642,87 @@ border-radius:20px;
 font-weight:600;
 
 }
+
+/* ICON BUTTONS */
+
+.edit-btn,
+.delete-btn{
+
+display:flex;
+align-items:center;
+gap:6px;
+
+}
+
+
+/* SCHEDULE + REMINDER INFO */
+
+.schedule-info{
+
+display:flex;
+align-items:center;
+gap:5px;
+
+color:#475569;
+font-size:13px;
+
+}
+
+
+.reminder-badge{
+
+display:flex;
+align-items:center;
+gap:5px;
+
+font-size:12px;
+font-weight:600;
+
+padding:5px 12px;
+border-radius:20px;
+
+}
+
+
+.reminder-badge.on{
+
+background:#dcfce7;
+color:#16a34a;
+
+}
+
+
+.reminder-badge.off{
+
+background:#f1f5f9;
+color:#94a3b8;
+
+}
+
+
+/* POPUP ACTIONS */
+
+.popup-actions{
+
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:10px;
+
+}
+
+
+.empty h3{
+
+margin:0 0 8px 0;
+color:#111827;
+
+}
+
+
+.empty p{
+
+color:#64748b;
+margin:0;
+
+}
