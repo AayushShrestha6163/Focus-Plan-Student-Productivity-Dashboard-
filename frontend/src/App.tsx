@@ -7,6 +7,9 @@ import Tasks from "./pages/Tasks";
 import AddTask from "./pages/AddTask";
 import EditTask from "./pages/EditTask";
 import Goals from "./pages/Goals";
+import Study from "./pages/Study";
+import Analytics from "./pages/Analytics";
+import CalendarPage from "./pages/Calendar";
 function App() {
   return (
     <Routes>
@@ -18,6 +21,10 @@ function App() {
       <Route path="/add-task" element={<AddTask />} />
       <Route path="/edit-task/:id" element={<EditTask />} />
       <Route path="/goals" element={<Goals />} />
+      <Route path="/study" element={<Study />} />
+      <Route path="/analytics" element={<Analytics />} />
+      <Route path="/calendar" element={<CalendarPage />} />
+
     </Routes>
   );
 }
